@@ -1,0 +1,30 @@
+<%= form_for :citizen, url: citizens_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :birthdate %><br>
+    <%= f.text_field :birthdate %>
+  </p>
+  
+   <p>
+    <%= f.label :father %><br>
+    <%= f.text_field :father %>
+  </p>
+  
+   <p>
+    <%= f.label :mother %><br>
+    <%= f.text_field :mother %>
+  </p>
+  
+   <p>
+    <%= f.label :profession %><br>
+    <%= f.text_field :profession %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
