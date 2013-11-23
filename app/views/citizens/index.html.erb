@@ -1,0 +1,28 @@
+<div>
+<h1>Registry of Citizens</h1>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name
+      <th>Birthdate
+      <th>Father
+      <th>Mother
+      <th>Profession
+    </tr>
+  </thead>
+  <tbody>
+    <% @citizens.each do |citizen| %>
+      <tr>
+        <td><%= citizen.name %></td>
+        <td><%= citizen.birthdate %></td>
+        <td><%= citizen.father %></td>
+        <td><%= citizen.mother %></td>
+        <td><%= citizen.profession %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+  
