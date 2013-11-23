@@ -1,12 +1,17 @@
 class CitizensController < ApplicationController
 
 def new
+  @citizen = Citizen.new
 end
 
 def create
   @citizen = Citizen.new(citizen_params)
-  @citizen.save
-  redirect_to @citizen
+
+  if @citizen.save
+    redirect_to @citizen
+  else
+    render 'new'
+  end
 end
 
 def show

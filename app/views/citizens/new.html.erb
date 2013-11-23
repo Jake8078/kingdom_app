@@ -1,4 +1,14 @@
 <%= form_for :citizen, url: citizens_path do |f| %>
+  <% if @citizen.errors.any? %>
+  <div id="error_explanation">
+    <h2>Off with his head!</h2>
+    <ul>
+    <% @citizen.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -6,9 +16,9 @@
  
   <p>
     <%= f.label :birthdate %><br>
-    <%= f.text_field :birthdate %>
+    <%= f.date_field :birthdate %>  
   </p>
-  
+
    <p>
     <%= f.label :father %><br>
     <%= f.text_field :father %>
